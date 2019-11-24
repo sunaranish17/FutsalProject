@@ -33,7 +33,10 @@ class ArenaController extends Controller
     public function create()
     {
         //
-        $data=Company::find(1);
+       $ind= Auth::user()->id;
+
+
+        $data=Company::find(2);
         return view('back.arena.pages.arenainfo', compact('data'));
         //return view('back.arena.pages.arena');
     }

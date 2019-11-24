@@ -26,7 +26,7 @@
 
 
                 <div class="col-md-8">
-                    <h1 class="heading">Pitch Booking</h1>
+                    <h1 class="heading">For Booking</h1>
                     <p> Futsal is played between two teams of five players each, one of whom is the goalkeeper. </p>
                    
                 </div>

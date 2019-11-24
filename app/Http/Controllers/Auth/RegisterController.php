@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\User;
+USE App\Company;
+USE App\Customer;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -63,11 +66,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        return $db= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'type'=>$data['user_type'],
-        ]);
+                        ]);
+
+       
+        if($data['user_type'] == 1){
+
+            Customer::create([
+            'uid' => $db->id ,
+                ]);
+                            
+            }
+            elseif($data['user_type'] == 2){
+
+            Company::create([
+            'uid' => $db->id ,
+                ]);
+            }
+
+
     }
 }

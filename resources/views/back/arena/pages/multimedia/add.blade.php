@@ -53,7 +53,7 @@
                   <!-- image type  -->
                         <div class="row">
                                 <div class="col-md-3"><label >Image status:</label></div>
-                                <div class="col-md-9"><input type="status" class="form-control" id="status"  name="status" value="#"></div>
+                                <div class="col-md-9"><input type="status" class="form-control" id="status"  name="status" value=""></div>
                         </div>  
                         <br>
                   <!-- End of image type -->
