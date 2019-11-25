@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Company;
 use App\user;
 use Auth;
+use DB;
 
 class ArenaController extends Controller
 {
@@ -34,9 +35,15 @@ class ArenaController extends Controller
     {
         //
        $ind= Auth::user()->id;
-
-
-        $data=Company::find(2);
+       //dd($ind);
+       $inde = DB::table('companies')
+            ->join('users', 'users.id', '=', 'companies.uid')
+            ->where('companies.uid','=',$ind)
+            ->get(); 
+           //dd($data);
+        $cid=$inde;
+        dd($cid);
+        $data=Company::find($cid);
         return view('back.arena.pages.arenainfo', compact('data'));
         //return view('back.arena.pages.arena');
     }
@@ -47,9 +54,10 @@ class ArenaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function location()
     {
         //
+        return view('back.arena.pages.locationdetail');
     }
 
     /**

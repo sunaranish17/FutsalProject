@@ -66,7 +66,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return $db= User::create([
+         $db= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -79,6 +79,7 @@ class RegisterController extends Controller
             Customer::create([
             'uid' => $db->id ,
                 ]);
+            
                             
             }
             elseif($data['user_type'] == 2){
@@ -86,7 +87,10 @@ class RegisterController extends Controller
             Company::create([
             'uid' => $db->id ,
                 ]);
+
             }
+
+        return $db ;
 
 
     }

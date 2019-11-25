@@ -75,9 +75,9 @@
 
 
           <li>
-            <a class="" href="{{url('multimedia')}}">
+            <a class="" href="{{url('location')}}">
              <i class="fa fa-film" aria-hidden="true"></i>
-             <span>multimedia</span>
+             <span>location</span>
            </a>
          </li>
 
