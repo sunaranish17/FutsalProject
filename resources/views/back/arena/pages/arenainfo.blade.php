@@ -16,13 +16,12 @@
        </div>
        
        @foreach($data as $data)
-          
-       <form method="post" action="{{url('setting/update')}}/{{$data->id}}" enctype="multipart/form-data">
+       <form method="post" action="{{url('setting/update',$data->id)}}" enctype="multipart/form-data">
         @csrf
     <!-- Main Content -->
         <div class="row">
       <!-- left Content -->
-            <div class="col-lg-8">
+            <div class="col-lg-12">
               <!-- Company Content -->
               <div class="form-wrapper well">
                 <div class="form-group">
@@ -30,19 +29,12 @@
                   <!-- Company  -->
                   <div class="row">
                     <div class="col-md-3"><label >Company:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="company_name"  name="company_name" value=""></div>
+                    <div class="col-md-9"><input type="text" class="form-control" id="company_name"  name="company_name" value="{{$data->name}}"></div>
                   </div>
                   <br>
                   <!-- End of Company -->
 
-                  <!-- location  -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Address:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="location"  name="location" value=""></div>
-                  </div>  
-                  <br>
-                  <!-- End of location -->
-
+                
                   <!-- Cotact  -->
                   <div class="row">
                     <div class="col-md-3"><label >Contact:</label></div>
@@ -50,18 +42,7 @@
                   </div>  
                   <br>
                   <!-- End of Contact -->
-
-
-
-                  <!-- Description  -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Description:</label></div>
-                   <div class="col-md-9"><textarea cols="30" id="description"> </textarea></div>
-                  </div>
-                  <!-- End of Description -->
-
                 </div>
-              </div>
               <!-- End of Company Content -->
               <br>
               <!-- Social Link -->
@@ -98,14 +79,7 @@
                   <br>
                   <!-- End of googlemap -->
 
-                  <!-- googleplus  -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Google Plus:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="googlePlus"  name="googlePlus" value=#></div>
-                  </div>  
-                  <br>
-                  <!-- End of googleplus -->
-
+                  
                   <!-- Twitter  -->
                   <div class="row">
                     <div class="col-md-3"><label >twitter:</label></div>
@@ -113,13 +87,6 @@
                   </div>  
                   <br>
                   <!-- End of twitter -->
-
-                  <!-- instagram  -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Instagram:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="instagram"  name="instagram" value="3"></div>
-                  </div>
-                  <!-- End of instagram -->
                 </div>
               </div>
 
@@ -145,7 +112,7 @@
           </div>
           <!-- End of Button Bar -->
         </form>
-        @endforeach
+       @endforeach
      </section>
    </section>
 

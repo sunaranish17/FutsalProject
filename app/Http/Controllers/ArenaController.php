@@ -46,6 +46,7 @@ class ArenaController extends Controller
 
         $data = DB::table('companies')
         ->join('users','users.id','=','companies.uid')
+        ->where('companies.uid',$uid)
         ->select('companies.*','users.name')
         ->get();
 
@@ -262,6 +263,13 @@ class ArenaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $uid = Auth::user()->id;
+        $cmp=User::find($uid);
+        $cmp->name=$request->company_name;
+        $cmp->save();
+
+
+
          $setting=Company::find($id);
         // $setting->companyName=$request->company_name;
         // $setting->location=$request->location;

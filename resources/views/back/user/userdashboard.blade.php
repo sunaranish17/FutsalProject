@@ -1,4 +1,4 @@
-@extends('front.layout.master')
+@extends('back.user.layout.master')
 
 @section('content')
 <div class="row">
@@ -34,7 +34,41 @@
                     <img src="{{url('frontend/img/futsal.jpg')}}" alt="" class="img-responsive">
                 </div>
          <!-- /booking -->
-    
+
+          <div>
+          <!--   <table class="table">
+              <thead>
+               
+                <?php foreach ($data as $info) {?>
+                
+
+                <tr>
+                  <th scope="col">S.N</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Opening Time</th>
+                  <th scope="col">Closing Time</th>
+                  <th> Time </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><?php echo $info->name?> </td>
+                  <td><?php echo $info->tole ?></td>
+                  <td><?php echo $info->contact ?></td>
+                  <td><?php echo $info->time_start ?></td>
+                  <td><?php echo $info->time_end ?></td>
+                  <td></td>
+                  <td><a href=""><button type="submit" class="btn-success"> Book </button> </td></a>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+        </div>
+     -->
     <!-- logout  -->
     <section class="section-padding">
         <div class="container">

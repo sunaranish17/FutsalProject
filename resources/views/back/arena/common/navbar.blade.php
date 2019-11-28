@@ -59,30 +59,16 @@
            </a>
          </li>
 
-         <li class="sub-menu">
-           <a href="{{url('rate')}}" class="">
-             <i class="fa fa-files-o" aria-hidden="true"></i>
-             <span>rate</span>
-           </a>
-         </li>
-
+     
          <li class="sub-menu">
            <a href="{{url('working_hour')}}" class="">
-             <i class="fa fa-sliders" aria-hidden="true"></i>
              <span>working hour</span>
            </a>
          </li>
 
-         <li>
-           <a class="" href="{{url('offers')}}">
-             <i class="fa fa-film" aria-hidden="true"></i>
-             <span>offers</span>
-           </a>
-         </li>
 
           <li>
             <a class="" href="{{url('location')}}">
-             <i class="fa fa-user" aria-hidden="true"></i>
              <span>location</span>
            </a>
          </li>
